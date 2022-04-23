@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Tudo Pronto!</title>
+  <style type="text/css">
+    body {
+      background-color: rgba(0, 0, 0, 0.4);
+      background-blend-mode: darken;
+    }
+    .faixa{
+      position: fixed;
+      width: 100%;
+    }
+
+    .faixa p {
+        height: 40px;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        background-color: #AE0000;
+        font-weight: 100;
+      }
+
+      .number {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    .footer p{
+          font-weight: 100;
+          font-size: 12px;
+          margin: 20px auto;
+          padding: 2px 28px;
+          text-align: center;
+          margin-bottom: 1rem;
+          color: #787878;
+    }
+    .text-white {
+      font-family: "Nunito Sans", Sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      color: #B6B6B6;
+      padding-top: 100px;
+      text-align: center;
+    }
+    .hide {
+      display: none;
+    }
+    .black img{
+      max-width: 90%;
+      border-radius: 10px;
+    }
+    .headline{
+      color: white;
+      text-align: center;
+    }
+    .headline span{
+      color: #AE0000;
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL-AQUI');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL-AQUI&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+<body> 
+  <div class="faixa">
+    <p><span class="number" id="iD1">291</span> Pessoas assistindo nesse momento...</p>
+  </div>
+  <div class="cont">
+    <h3 class="my-4 headline"><b>Veja o barulho que uma <span>SIMPLES VITAMINA DE APENAS 6 INGREDIENTES</span> vem causando entre as mulheres no Brasil...<br></h3>
+    <div class="black">
+      <img src="mulher.png" alt="Ilustração PZB">
+        <h1 id="responda">Responda:</h1>
+      <div id="primeira">
+        <div class="question">
+        <p>Você já está em uma dieta?</p>
+        </div>
+        <div class="answer">
+        <button class="btn" onclick="segunda()">SIM</button>
+        <button class="btn" onclick="segunda()">NÃO</button>
+        </div>
+      </div>
+      <div id="segunda" class="hide">
+        <div class="question">
+        <p>Você tem a mente aberta para novas descobertas científicas no campo da nutrição e estudos do comportamento alimentar?</p>
+        </div>
+        <div class="answer">
+        <button class="btn" onclick="terceira()">SIM</button>
+        <button class="btn" onclick="terceira()">NÃO</button>
+        </div>
+      </div>
+      <div id="terceira" class="hide">
+        <div class="question">
+        <p>O vídeo a seguir tem um limite para a quantidade de pessoas que podem assistir ao mesmo tempo. Você pretende assistir até o final?</p>
+        </div>
+        <div class="answer">
+        <button class="btn" onclick="delay()">SIM</button>
+        <button class="btn" onclick="delay()">NÃO</button>
+        </div>
+       </div>
+
+        <div id="contBarra" class="hide">
+          <div id="progressbar">
+           <span id="loading"></span>
+          <div id="load" class="troca">Analisando suas respostas...</div>
+          <div id="title">Um momento</div>
+          </div>          
+        </div>
+    </div>
+    <!-- Termos de Uso e Política de Privacidade -->
+    <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
+    </div>
+    <div class="footer">
+        <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.  Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas e resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Sinta-se à vontade para falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
+    </div>
+    <p style="text-align: center; color: #B6B6B6; font-weight: bold; font-size: 16px;">© 2022 – Todos os direitos reservados.</p>
+
+  </div>
+  <script type="text/javascript">
+    //perguntas
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+    function barra() {
+      document.getElementById("terceira").classList.add("hide");
+      document.getElementById("contBarra").classList.remove("hide");
+      setTimeout(TextoUm, 3000);
+      setTimeout(TextoDois, 5000);
+    }
+
+    function redirect() {
+      location.href = "../index.html"
+    }
+    function TextoUm(){
+      document.getElementById("load").innerHTML = "Reservando sua vaga no vídeo...";
+    }
+    function TextoDois(){
+      document.getElementById("load").innerHTML = "Tudo certo!";
+    }
+
+    //barra de progresso
+    function delay(){
+      barra();
+      document.getElementById("responda").innerHTML = "Obrigado por responder!";
+      setInterval(redirect, 7000);
+    }
+
+
+    //faixa de pessoas assistindo
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function MudarPessoas(){
+      const result = getRandomInt(297, 309);
+      //console.log(result); 
+      const Element = document.getElementById("iD1").innerHTML = result;
+    };
+    setInterval(MudarPessoas, 3000);
+  </script>
+</body>
+</html>

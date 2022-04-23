@@ -1,0 +1,116 @@
+@font-face {
+	font-family: Gotham Rounded;
+	src: url("font.otf") format("opentype");
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	font-family: "Nunito Sans", Sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: url("madeira.jpg") no-repeat fixed top;
+	background-size: cover;
+	text-shadow: 1px 1px 4px #000;
+}
+
+.cont {
+	width: 700px;
+	max-width: 90%;
+	padding-top: 35px;
+}
+
+.black {
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 0 10px 2px;
+	/*margin-top: 20%;*/
+}
+
+.answer {
+	display: grid;
+	grid-template-columns: repeat(1, auto);
+	gap: 10px;
+}
+
+.btn {
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 30px;
+	background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%);
+	outline: none;
+	color: black;
+	text-decoration: none;
+}
+
+.black h1 {
+	font-size: 22px;
+	color: #F4C222;
+	padding-top: 15px;
+}
+
+.black p {
+	font-size: 18px;
+	color: white;
+}
+
+#contBarra {
+  width:100%;
+  height:100px;
+  position: relative;
+  margin: 10% auto auto auto;
+}
+
+#progressbar{
+  height: 26px;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  background: #E0E0E0;
+  border-radius: 4px;
+  margin-top: 10px;
+  /*margin-left:20px;*/
+  padding: 2px;
+  
+}
+#loading{
+  transition: all 500ms ease;
+  height: 20px;
+  width: calc(100% - 10px);
+  border-radius: 2px;
+  background: #ff5535;
+  position: absolute;
+  left: 0%;
+  margin: 1px;
+  display: inline-block;
+  animation: load 8s ease infinite;
+}
+#load{
+  font-family: 'Lato', sans-serif;
+  font-weight: regular;
+  text-align: center;
+  margin-top: 35px;
+  color: #fff;
+}
+
+#title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -100px;
+  color: white;
+}
+
+@keyframes load{
+  0%{ width: 0%;}
+  10%{ width: 10%;}
+}
