@@ -47,10 +47,14 @@ body {
 	border-radius: 10px;
 	padding: 5px 10px;
 	font-size: 30px;
-	background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%);
+	background: linear-gradient(to bottom, #ff6600 0%, #CC5012 100%);
 	outline: none;
 	color: black;
 	text-decoration: none;
+}
+
+.btn:hover{
+	background: linear-gradient(to bottom, #FC956C 0%, #E97247 100%);
 }
 
 .black h1 {
